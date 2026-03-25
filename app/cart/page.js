@@ -2,6 +2,7 @@
 
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, updateQuantity } from "../store/cartSlice";
+import Link from "next/link";
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -37,6 +38,12 @@ export default function Cart() {
           </div>
         ))}
       </div>
+      <Link
+        href="/checkout"
+        className="mt-4 w-full max-w-2xl bg-green-700 text-white border-2 border-black rounded-2xl px-6 py-4 font-bold text-center shadow-[4px_4px_0px_black] hover:bg-green-600 transition-all"
+      >
+        Gå til Checkout
+      </Link>
     </main>
   );
 }
